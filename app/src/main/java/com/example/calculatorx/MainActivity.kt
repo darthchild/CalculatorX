@@ -35,7 +35,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun onDigit(view:View){
+    fun onDigit(view: View){
+        if(tvInput?.text == "0")
+            onClear(view)
         tvInput?.append( (view as Button).text)
         lastNumeric = true
         lastDecimal = false
